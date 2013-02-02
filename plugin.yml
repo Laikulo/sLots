@@ -1,0 +1,30 @@
+name: sLots
+main: org.haunhaus.aaron.sLots.Plugin.Plugin_sLots
+version: 1.0.3
+depend: [Vault] 
+commands:
+   lot:
+      description: This tells a player about the lot that he/she is in.
+      usage: /lot
+      permission: sLots.lot
+      permission-message: You don't have <permission>
+   buylot:
+      description: This allows a player to buy the lot that he/she is in.
+      usage: /buylot
+      permission: sLots.buy.normal
+      permission-message: You don't have <permission>
+   selllot:
+      description: This allows a moderator to sell a (premier) lot to a player.
+      usage: /buylot <world> <lot> <player>
+      permission: sLots.sell.premier
+      permission-message: You don't have <permission>
+permissions:
+    slots.lot:
+        description: allows a player to list information about a lot
+        default: true
+    slots.buy.normal:
+        description: allows a player to buy normal a lot
+        default: true
+    slots.sell.premier:
+        description: allows a moderator to sell a (premier) lot to a player
+        default: op
